@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: 251 249 246;
+  --color-background-alt: 244 239 231;
+  --color-surface: 255 255 255;
+  --color-border: 232 225 214;
+  --color-ink: 33 24 18;
+  --color-ink-muted: 111 99 87;
+  --color-terracotta: 193 84 31;
+  --color-terracotta-dark: 143 61 22;
+  --color-mustard: 227 167 62;
+}
+
+.dark {
+  --color-background: 21 17 13;
+  --color-background-alt: 26 21 16;
+  --color-surface: 30 24 18;
+  --color-border: 51 42 32;
+  --color-ink: 245 239 228;
+  --color-ink-muted: 166 153 133;
+  --color-terracotta: 227 122 67;
+  --color-terracotta-dark: 240 158 112;
+  --color-mustard: 227 167 62;
+}
+
+* {
+  border-color: rgb(var(--color-border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-ink));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: rgb(var(--color-terracotta) / 0.2);
+  color: rgb(var(--color-ink));
+}
