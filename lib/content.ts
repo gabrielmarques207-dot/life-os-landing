@@ -14,14 +14,14 @@ import {
 export const site = {
   name: "Life OS",
   tagline: "O sistema operacional da sua vida",
-  url: "https://lifeos.example.com",
-  price: "€99",
+  url: "https://life-os-landing-nine.vercel.app",
+  price: "€29",
   creatorHandle: "De Minas para Portugal",
   location: "Porto, Portugal",
   // TODO: trocar pelo link real do checkout (Gumroad, Stripe Payment Link, etc.)
   // antes de publicar. É o único lugar que precisa mudar — Hero, Offer e
   // FinalCta leem todos daqui.
-  checkoutUrl: "#preco",
+  checkoutUrl: "https://pay.hotmart.com/S106890698N?checkoutMode=10",
 };
 
 export const hero = {
@@ -181,7 +181,7 @@ export const faq = {
 export const offer = {
   kicker: "Sem mensalidade, sem pegadinha",
   title: "Um pagamento. Seu para sempre.",
-  price: "€99",
+  price: "€29",
   priceNote: "pagamento único",
   includes: [
     "Workspace Life OS completo (9 databases conectadas)",
@@ -196,7 +196,7 @@ export const offer = {
 
 export const finalCta = {
   title: "Você já está reconstruindo a sua vida. Deixa o sistema cuidar da organização.",
-  cta: "Quero o meu Life OS — €99",
+  cta: "Quero o meu Life OS — €29",
 };
 
 export const nav = {

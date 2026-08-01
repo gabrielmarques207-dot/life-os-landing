@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Brain } from "lucide-react";
 import { Button } from "./ui/Button";
-import { nav, offer } from "@/lib/content";
+import { nav, offer, site } from "@/lib/content";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,8 +39,11 @@ export function Nav() {
           ))}
         </div>
 
-        <Button href="#preco" size="md" className="!px-5 !py-2.5 !text-sm">
-          {offer.cta.split(" ").slice(0, 2).join(" ")}
+        <Button href={site.checkoutUrl}
+  size="md"
+  className="!px-5 !py-2.5 !text-sm"
+>
+  Comprar Agora
         </Button>
       </div>
     </nav>

@@ -21,40 +21,71 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = "Life OS — O sistema operacional pessoal dentro do Notion";
+const title = "Life OS | Organize sua vida no Notion";
+
 const description =
-  "Life OS conecta objetivos, projetos, tarefas, hábitos e finanças num só sistema dentro do Notion. Pagamento único, sem mensalidade, com manual de 21 páginas incluído.";
+  "O sistema definitivo para organizar objetivos, tarefas, hábitos, projetos e finanças dentro do Notion. Template completo com manual em PDF, bônus exclusivos e atualizações gratuitas.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+
   title,
+
   description,
+
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
+
   keywords: [
-    "template Notion",
-    "sistema de produtividade",
-    "organização pessoal",
-    "Notion PT",
-    "planejamento de vida",
+    "Life OS",
+    "Template Notion",
+    "Notion",
+    "Produtividade",
+    "Organização",
+    "Gestão pessoal",
+    "Planejamento",
+    "Hábitos",
+    "Finanças",
+    "Second Brain",
+    "Sistema de produtividade",
+    "Notion Portugal",
   ],
+
   alternates: {
     canonical: "/",
   },
+
   openGraph: {
     title,
     description,
     url: site.url,
-    siteName: site.name,
+    siteName: "Life OS",
     locale: "pt_PT",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: site.name }],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Life OS",
+      },
+    ],
   },
+
   twitter: {
     card: "summary_large_image",
     title,
     description,
     images: ["/og-image.png"],
   },
-  robots: { index: true, follow: true },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const jsonLd = {
@@ -62,20 +93,26 @@ const jsonLd = {
   "@type": "Product",
   name: "Life OS",
   description,
-  brand: { "@type": "Brand", name: site.creatorHandle },
+  brand: {
+    "@type": "Brand",
+    name: "Life OS",
+  },
   offers: {
     "@type": "Offer",
-    price: "99.00",
+    price: "29.00",
     priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="pt-PT" suppressHydrationWarning>
       <head>
-        {/* Blocking, minimal script: applies dark mode before first paint to avoid flash. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -86,11 +123,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
       </head>
+
       <body
         className={`${inter.variable} ${sourceSerif.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
